@@ -1,5 +1,15 @@
+
+# Copyright (C) 2018-2019 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
 DEVICE_PATH := device/samsung/a70q
+
 BOARD_VENDOR := samsung
+
+#build
+BUILD_BROKEN_DUP_RULES := true
+
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2021-03-01
