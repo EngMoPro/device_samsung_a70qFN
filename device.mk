@@ -276,7 +276,16 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     ueventd.qcom.rc \
 
+# Telephony
+PRODUCT_PACKAGES += \
+    qti_telephony_hidl_wrapper.xml \
+    qti_telephony_utils.xml \
+    qti-telephony-hidl-wrapper \
+    qti-telephony-utils \
+    telephony-ext
 
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 # RIL
 PRODUCT_PACKAGES += \
