@@ -199,9 +199,17 @@ PRODUCT_PACKAGES += \
 	libhwbinder.vendor
 
 
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
+
+
+# IMS
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    ims_ext_common.xml
+
 
 # IRQ
 PRODUCT_COPY_FILES += \
