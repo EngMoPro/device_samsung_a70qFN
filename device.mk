@@ -53,6 +53,16 @@ TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
 
+# Fingerprint feature
+PRODUCT_PACKAGES += \
+    vendor.samsung.hardware.biometrics.fingerprint@2.1-service.a70q \
+    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.a70q
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
+    vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+
+
 # Display/Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.2-impl \
