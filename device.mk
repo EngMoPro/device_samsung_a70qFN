@@ -247,6 +247,7 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+<<<<<<< HEAD
     init.class_main.sh \
     init.crda.sh \
     init.mdm.sh \
@@ -275,7 +276,18 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     ueventd.qcom.rc \
 
-# Seccomp
+
+
+# RIL
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.2 \
+    android.hardware.radio.config@1.0 \
+    libjson \
+    librmnetctl \
+    libxml2 \
+    libprotobuf-cpp-full
+
+# Seccomp policy
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/seccomp/atfwd@2.0.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/atfwd@2.0.policy \
     $(LOCAL_PATH)/configs/seccomp/codec2.vendor.base.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base.policy \

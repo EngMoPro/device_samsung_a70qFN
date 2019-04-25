@@ -168,8 +168,16 @@ ifeq ($(HOST_OS),linux)
 endif
 
 
+
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
+
+
+# RIL
+ENABLE_VENDOR_RIL_SERVICE := true
+TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
+TARGET_RIL_VARIANT := caf
+
 
 # GPS
 TARGET_NO_RPC := true
