@@ -14,6 +14,12 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.xiaomi_a70q
 
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    libbthost_if
+
+
+
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
