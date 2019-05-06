@@ -104,6 +104,18 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.9.vendor \
     vendor.display.config@1.10.vendor
 
+
+
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+    android.hardware.drm@1.0-service \
+    android.hardware.drm@1.3-service.clearkey \
+
+
+
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.broadcastradio@1.0-impl \
