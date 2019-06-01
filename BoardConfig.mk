@@ -231,6 +231,7 @@ endif
 TARGET_ENABLE_MEDIADRM_64 := true
 
 
+<<<<<<< HEAD
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
@@ -238,9 +239,12 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 TARGET_RIL_VARIANT := caf
 
 
+
+
 # FM
 BOARD_HAVE_QCOM_FM := true
 BOARD_HAS_QCA_FM_SOC := "cherokee"
+
 
 
 
