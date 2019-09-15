@@ -65,6 +65,7 @@ vendor/lib64/libaudioparsers.so
 vendor/lib64/libqtigef.so
 
 # ACDB
+<<<<<<< HEAD
 vendor/etc/audconf/ACR/Bluetooth_cal.acdb
 vendor/etc/audconf/ACR/Codec_cal.acdb
 vendor/etc/audconf/ACR/General_cal.acdb
@@ -315,6 +316,13 @@ vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 vendor/lib64/soundfx/libasphere.so
+=======
+vendor/etc/acdbdata/adsp_avs_config.acdb
+
+# AptX - from bonito-user-10-QPP6.190730.005-5773495-release-keys
+product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
+product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
+>>>>>>> 30acec08... sm6150-common: Build audio stack from source [1/2]
 
 # Bluetooth
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
@@ -328,6 +336,7 @@ vendor/lib/com.qualcomm.qti.bluetooth_audio@1.0.so
 vendor/lib/vendor.samsung.hardware.bluetooth@1.0.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/libbtnv.so
+<<<<<<< HEAD
 vendor/lib64/vendor.samsung.hardware.bluetooth@1.0.so
 
 # Camera
@@ -549,6 +558,25 @@ vendor/lib64/vendor.samsung.hardware.camera.provider@2.4.so
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.elf
+=======
+vendor/lib64/libbt-hidlclient.so
+
+# Bluetooth Audio
+vendor/lib64/hw/audio.bluetooth_qti.default.so
+vendor/lib64/btaudio_offload_if.so
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
+vendor/lib64/libbluetooth_audio_session_qti.so
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
+vendor/lib/hw/audio.bluetooth_qti.default.so
+vendor/lib/btaudio_offload_if.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
+vendor/lib/libbluetooth_audio_session_qti.so
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
+>>>>>>> 30acec08... sm6150-common: Build audio stack from source [1/2]
 
 # CDSP
 vendor/bin/cdsprpcd
