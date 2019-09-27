@@ -291,6 +291,10 @@ PRODUCT_COPY_FILES += \
 
 
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service.samsung-a70q
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
@@ -467,6 +471,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
 
+
+
+
+# Touchscreen
+PRODUCT_PACKAGES += \
+    libtinyxml2
 
 
 # VNDK
