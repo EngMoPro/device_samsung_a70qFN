@@ -345,7 +345,13 @@ PRODUCT_PACKAGES += \
     libjson \
     librmnetctl \
     libxml2 \
+<<<<<<< HEAD
     libprotobuf-cpp-full
+=======
+    libprotobuf-cpp-full \
+    libtrafficcontrol-spoofer \
+	libcutils_shim
+>>>>>>> d4210f79... a70q: shims: Provide strndup16to8 and strdup8to16 for RIL
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
