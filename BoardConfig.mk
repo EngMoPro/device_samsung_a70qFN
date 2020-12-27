@@ -226,19 +226,6 @@ ifeq ($(HOST_OS),linux)
 endif
 
 
-# Root
-TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
-BOARD_ROOT_EXTRA_FOLDERS := \
-    carrier \
-    dqmdbg \
-    efs \
-    keydata \
-    keyrefuge \
-    metadata \
-    optics \
-    prism \
-    spu \
-    omr
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
@@ -273,20 +260,6 @@ BOARD_VNDK_VERSION := current
 
 
 
-# SELinux
-include device/qcom/sepolicy/SEPolicy.mk
-
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/samsung_slsi/sepolicy/common/private \
-    $(DEVICE_PATH)/sepolicy/private
-
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
-    device/samsung_slsi/sepolicy/common/public
-
-BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-SELINUX_IGNORE_NEVERALLOWS := true
-
-
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
@@ -302,6 +275,21 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/framework_compatibility_matrix.xml
 
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+
+
+
+# Root
+BOARD_ROOT_EXTRA_FOLDERS := efs omr
+
+
+
+
+# SELinux
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+SELINUX_IGNORE_NEVERALLOWS := true
+
+
 
 
 # WiFi
