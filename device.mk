@@ -354,6 +354,12 @@ PRODUCT_PACKAGES += \
 
 
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.qti
+
+
+
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
 PRODUCT_EXTRA_VNDK_VERSIONS := 29
