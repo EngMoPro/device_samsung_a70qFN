@@ -92,6 +92,7 @@ on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
 on early-boot
+<<<<<<< HEAD
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
     # Allow subsystem (modem etc) debugging
@@ -136,6 +137,12 @@ on early-boot
     chmod 0664 /mnt/vendor/persist/data/pfm/licenses/store_3
     chown system system /mnt/vendor/persist/data/pfm/licenses/store_4
     chmod 0664 /mnt/vendor/persist/data/pfm/licenses/store_4
+=======
+    mount none /system/lib64/libperfmgr.so /vendor/lib64/libperfmgr.so bind
+    mount none /system/lib64/pixel-power-ext-V1-ndk_platform.so /vendor/lib64/pixel-power-ext-V1-ndk_platform.so bind
+    mount none /system/lib64/android.hardware.power-V1-ndk_platform.so /vendor/lib64/android.hardware.power-V1-ndk_platform.so bind
+    mount none /system/lib64/vendor.lineage.power-V1-ndk_platform.so /vendor/lib64/vendor.lineage.power-V1-ndk_platform.so bind
+>>>>>>> 7805feb... sm6150-common: power: Convert to aidl power-libperfmgr HAL
 
 on boot
     #chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
