@@ -48,6 +48,7 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    libbluetooth_qti.so \
     libbthost_if
 
 

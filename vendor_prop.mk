@@ -1,175 +1,159 @@
-PRODUCT_PROPERTY_OVERRIDES +=  \
-    audio.offload.min.duration.secs=30 \
+# Audio
+PRODUCT_PROPERTY_OVERRIDES += \
+    af.fast_track_multiplier=1 \
+    audio.deep_buffer.media=true \
+    audio.offload.buffer.size.kb=32 \
+    audio.offload.gapless.enabled=true \
+    av.offload.enable=true \
+    vendor.audio.offload.buffer.size.kb=32 \
+    vendor.audio.offload.gapless.enabled=true \
+    vendor.audio_hal.in_period_size=144 \
+    vendor.audio_hal.period_multiplier=4 \
+    vendor.audio_hal.period_size=192 \
+    ro.qc.sdk.audio.ssr=false \
+    ro.vendor.audio.sdk.ssr=false \
+    tunnel.audio.encode=true \
+    qcom.hw.aac.encoder=true \
+    ro.config.vc_call_vol_steps=7 \
+    vendor.audio.feature.compr_voip.enable=true \
+    vendor.audio.feature.deepbuffer_as_primary.enable=true \
+    vendor.audio.feature.fm.enable=true \
+    vendor.audio.feature.multi_voice_session.enable=true \
+    vendor.audio.feature.usb_offload.enable=true \
+    vendor.dedicated.device.for.voip=true \
+    use.dedicated.device.for.voip=true
+
+# AudioFlinger client heap size
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.af.client_heap_size_kbyte=7168
+
+# Bluetooth
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.bluetooth.library_name=libbluetooth_qti.so
+
+# Camera
+PRODUCT_PROPERTY_OVERRIDES += \
+    camera.aux.packagelist="org.codeaurora.snapcam,com.android.camera,com.android.lightboxtest" \
     camera.disable_zsl_mode=1 \
+    vendor.camera.aux.packagelist="org.codeaurora.snapcam,com.android.camera"
+
+# Crypto
+ PRODUCT_PROPERTY_OVERRIDES += \
+    ro.crypto.allow_encrypt_override=true \
+    ro.crypto.volume.filenames_mode=aes-256-cts
+
+# Dalvik VM
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapstartsize=8m \
     dalvik.vm.heapmaxfree=8m \
     dalvik.vm.heapminfree=2m \
     dalvik.vm.heapsize=512m \
-    dalvik.vm.heapstartsize=8m \
     dalvik.vm.heaptargetutilization=0.75 \
-    dalvik.vm.lockprof.threshold=500 \
-    debug.egl.hw=0 \
-    debug.mdpcomp.logs=0 \
-    debug.sf.early_app_phase_offset_ns=100000 \
-    debug.sf.early_gl_app_phase_offset_ns=100000 \
-    debug.sf.early_gl_phase_offset_ns=100000 \
-    debug.sf.early_phase_offset_ns=100000 \
-    debug.sf.enable_gl_backpressure=1 \
-    debug.sf.high_fps_early_gl_phase_offset_ns=100000 \
-    debug.sf.high_fps_early_phase_offset_ns=100000 \
-    debug.sf.high_fps_late_app_phase_offset_ns=100000 \
-    debug.sf.high_fps_late_sf_phase_offset_ns=100000 \
-    debug.sf.hw=0 \
-    debug.stagefright.ccodec=1 \
-    debug.stagefright.omx_default_rank=0 \
-    keyguard.no_require_sim=true \
-    media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
-    persist.backup.ntpServer=0.pool.ntp.org \
-    persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
-    persist.bluetooth.a2dp_offload.disabled=false \
-    persist.demo.hdmirotationlock=false \
+    ro.dalvik.vm.native.bridge=0
+
+# Display
+PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.sf.color_saturation=1.0 \
-    persist.sys.sf.hs_mode=0 \
-    persist.vendor.audio.avs.afe_api_version=2 \
+    debug.sf.hw=1 \
+    debug.egl.hw=1 \
+    debug.sf.latch_unsignaled=1 \
+    debug.mdpcomp.logs=1 \
+    ro.vendor.display.cabl=2 \
+    vendor.gralloc.disable_ubwc=0 \
+    vendor.display.disable_scaler=0 \
+    vendor.display.disable_inline_rotator=1 \
+    vendor.display.disable_decimation=1 \
+    vendor.display.disable_excl_rect_partial_fb=1 \
+    vendor.display.enable_null_display=0 \
+    vendor.display.disable_excl_rect=0 \
+    vendor.display.comp_mask=0 \
+    vendor.display.enable_default_color_mode=1 \
+    vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0 \
+    ro.sf.lcd_density=420 \
+    ro.opengles.version=196610
+
+# DRM
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true
+
+# Enable stm-events
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.debug.coresight.config=stm-events
+
+# FM
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.hw.fm.init=0
+
+# Factory Reset Protection
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.frp.pst=/dev/block/persistent
+
+# Fluence/Audio Proccessing
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.audio.fluence.speaker=true \
+    persist.audio.fluence.voicecall=true \
+    persist.audio.fluence.voicerec=false \
     persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.fluence.voicecall=true \
-    persist.vendor.audio.fluence.voicecomm=true \
     persist.vendor.audio.fluence.voicerec=false \
-    persist.vendor.audio.ras.enabled=false \
-    persist.vendor.audio.speaker.prot.enable=true \
-    persist.vendor.audio.spkr.cal.duration=100 \
-    persist.vendor.audio.spkr.cal.dynamic=true \
-    persist.vendor.audio.spv3.enable=true \
-    persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac \
-    persist.vendor.bt.aac_frm_ctl.enabled=true \
-    persist.vendor.cne.feature=0 \
-    persist.vendor.dpmhalservice.enable=1 \
-    persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
-    persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true \
-    persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=false \
-    persist.vendor.qcom.bluetooth.enable.splita2dp=true \
-    persist.vendor.qcom.bluetooth.scram.enabled=true \
-    persist.vendor.qcom.bluetooth.soc=cherokee \
-    persist.vendor.qcom.bluetooth.twsp_state.enabled=false \
-    persist.vendor.qcomsysd.enabled=1 \
-    persist.vendor.radio.atfwd.start=true \
-    persist.vendor.radio.enableadvancedscan=true \
-    ro.apex.updatable=false \
-    ro.bluetooth.a2dp_offload.supported=true \
-    ro.camera.notify_nfc=1 \
-    ro.carrier=unknown \
-    ro.config.alarm_alert=Homecoming.ogg \
-    ro.config.media_sound=Media_preview_Touch_the_light.ogg \
-    ro.config.notification_sound=Spaceline.ogg \
-    ro.config.notification_sound_2=Signal.ogg \
-    ro.config.ringtone=Over_the_Horizon.ogg \
-    ro.config.ringtone_2=Atomic_Bell.ogg \
-    ro.config.vc_call_vol_steps=8 \
-    ro.control_privapp_permissions=enforce \
-    ro.crypto.volume.filenames_mode=aes-256-cts \
-    ro.frp.pst=/dev/block/persistent \
-    ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30 \
-    ro.hardware.egl=adreno \
-    ro.hardware.gatekeeper=mdfpp \
-    ro.hardware.keystore=mdfpp \
-    ro.hardware.vulkan=adreno \
-    ro.incremental.enable=1 \
-    ro.opengles.version=196610 \
-    ro.security.cass.feature=1 \
-    ro.security.keystore.keytype=sak,gak \
-    ro.security.vpnpp.release=1.0 \
-    ro.security.vpnpp.ver=2.2 \
-    ro.sf.lcd_density=420 \
-    ro.slmk.2nd.custom_sw_limit=300 \
-    ro.slmk.2nd.freelimit_val=15 \
-    ro.slmk.custom_sw_limit=250 \
-    ro.slmk.custom_tm_limit=1000 \
-    ro.slmk.dha_cached_max=18 \
-    ro.slmk.dha_cached_min=6 \
-    ro.slmk.dha_empty_max=24 \
-    ro.slmk.enable_reentry_lmk=false \
-    ro.slmk.enable_userspace_lmk=true \
-    ro.slmk.fha_enable=true \
-    ro.slmk.kill_heaviest_task=true \
-    ro.smps.enable=false \
-    ro.telephony.iwlan_operation_mode=legacy \
-    ro.vendor.audio.sdk.fluencetype=none \
-    ro.vendor.audio.sdk.ssr=false \
-    ro.vendor.bluetooth.wipower=false \
+    ro.qc.sdk.audio.fluencetype=none \
+    ro.vendor.audio.sdk.fluencetype=none
+
+# Gatekeeper
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.gatekeeper=mdfpp
+
+# GPS/GNSS
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.qca1530=detect
+
+# IO CGroup
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.iocgrp.config=1
+
+# Keymaster
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.keystore=mdfpp
+
+# Light
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.lights=qcom
+
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
+    audio.offload.video=true
+
+# Misc
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.vendor.shutdown.waittime=500 # ro.kernel.qemu.gles=0
+
+# NFC
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.nfc_nci=nqx.default
+
+# Perf Stack
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
-    security.ADP.policy_version=00000000 \
-    security.ADP.version=0 \
-    security.ASKS.policy_version=00000000 \
-    security.ASKS.rufs_enable=true \
-    security.ASKS.time_value=00000000 \
-    security.ASKS.version=0 \
-    security.securehw.available=false \
-    security.securenvm.available=false \
-    sys.config.activelaunch_enable=true \
-    sys.config.hardcoder.enable=false \
-    sys.config.ibs.enable=false \
-    sys.vendor.shutdown.waittime=500 \
-    tas.smartamp.disable=false \
-    vendor.audio.adm.buffering.ms=2 \
-    vendor.audio.dolby.ds2.enabled=false \
-    vendor.audio.dolby.ds2.hardbypass=false \
-    vendor.audio.feature.a2dp_offload.enable=true \
-    vendor.audio.feature.audiozoom.enable=false \
-    vendor.audio.feature.compr_voip.enable=true \
-    vendor.audio.feature.compress_meta_data.enable=true \
-    vendor.audio.feature.concurrent_capture.enable=false \
-    vendor.audio.feature.deepbuffer_as_primary.enable=true \
-    vendor.audio.feature.display_port.enable=true \
-    vendor.audio.feature.external_dsp.enable=false \
-    vendor.audio.feature.external_speaker.enable=false \
-    vendor.audio.feature.fm.enable=true \
-    vendor.audio.feature.hdmi_edid.enable=true \
-    vendor.audio.feature.hfp.enable=true \
-    vendor.audio.feature.hwdep_cal.enable=false \
-    vendor.audio.feature.maxx_audio.enable=false \
-    vendor.audio.feature.multi_voice_session.enable=false \
-    vendor.audio.feature.snd_mon.enable=true \
-    vendor.audio.feature.spkr_prot.enable=true \
-    vendor.audio.feature.usb_offload.enable=true \
-    vendor.audio.flac.sw.decoder.24bit=true \
-    vendor.audio.hal.boot.timeout.ms=20000 \
-    vendor.audio.hw.aac.encoder=true \
-    vendor.audio.offload.buffer.size.kb=32 \
-    vendor.audio.offload.gapless.enabled=true \
-    vendor.audio.offload.multiaac.enable=true \
-    vendor.audio.offload.multiple.enabled=false \
-    vendor.audio.offload.passthrough=false \
-    vendor.audio.offload.track.enable=true \
-    vendor.audio.parser.ip.buffer.size=262144 \
-    vendor.audio.safx.pbe.enabled=false \
-    vendor.audio.spkr_prot.tx.sampling_rate=48000 \
-    vendor.audio.tunnel.encode=false \
-    vendor.audio.use.sw.alac.decoder=true \
-    vendor.audio.use.sw.ape.decoder=true \
-    vendor.audio.volume.headset.gain.depcal=true \
-    vendor.audio_hal.in_period_size=144 \
-    vendor.audio_hal.period_multiplier=3 \
-    vendor.audio_hal.period_size=192 \
-    vendor.display.comp_mask=0 \
-    vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0 \
-    vendor.display.disable_decimation=1 \
-    vendor.display.disable_dynamic_fps=1 \
-    vendor.display.disable_excl_rect=0 \
-    vendor.display.disable_ext_anim=1 \
-    vendor.display.disable_hw_recovery_dump=1 \
-    vendor.display.disable_inline_rotator=1 \
-    vendor.display.disable_scaler=0 \
-    vendor.display.disable_ui_3d_tonemap=1 \
-    vendor.display.enable_default_color_mode=1 \
-    vendor.display.enable_null_display=0 \
-    vendor.display.enable_optimize_refresh=1 \
-    vendor.display.idle_time=0 \
-    vendor.display.idle_time_inactive=0 \
-    vendor.gralloc.disable_ubwc=0 \
-    vendor.mm.enable.qcom_parser=16777215 \
-    vendor.qcom.bluetooth.soc=cherokee \
-    vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so \
-    vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so \
-    vendor.usb.diag.func.name=diag \
-    vendor.usb.use_ffs_mtp=0 \
+    vendor.perf.gestureflingboost.enable=true
+
+# Qualcomm System Daemon
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.qcomsysd.enabled=1
+
+# Radio/RIL
+ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.voice.path.for.pcm.voip=true \
-    wifi.aware.interface=wifi-aware0 \
+    persist.vendor.radio.atfwd.start=true \
+    persist.vendor.radio.apm_sim_not_pwdn=1 \
+    persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.data_con_rprt=1 \
+    persist.vendor.radio.sib16_support=1 \
+    persist.radio.multisim.config=dsds \
+    vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so \
+    vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so \
+    ro.vendor.sec.radio.def_network=9 \
+    ro.telephony.default_network=9,9 \
+    telephony.lteOnCdmaDevice=1 \
+    keyguard.no_require_sim=true \
+    persist.vendor.data.mode=concurrent \
+    ro.vendor.use_data_netmgrd=false
