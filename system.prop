@@ -37,3 +37,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Radio/RIL
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     use.voice.path.for.pcm.voip=true
+    
+    
+# Debug
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+ro.secure=0
+ro.debuggable=1    
