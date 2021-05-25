@@ -11,6 +11,12 @@ BOARD_VENDOR := samsung
 BUILD_BROKEN_DUP_RULES := true
 
 
+
+# APEX
+TARGET_FLATTEN_APEX := true
+
+
+
 # Security patch level
 VENDOR_SECURITY_PATCH := 2021-03-01
 
