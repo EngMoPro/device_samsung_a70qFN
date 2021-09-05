@@ -1,25 +1,39 @@
+# Bluetooth
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.bluetooth.disableabsvol=true \
+    persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac \
+    persist.vendor.btstack.enable.splita2dp=true \
+    persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
+    ro.bluetooth.emb_wp_mode=true \
+    ro.bluetooth.wipower=true \
+    vendor.bluetooth.soc=cherokee \
+    vendor.qcom.bluetooth.soc=cherokee \
+    persist.vendor.btstack.avrcp-playstatus.blacklist=true \
+    bt.max.hfpclient.connections=1
 
-#
-# from device/samsung/a70q/system.prop
-#
+# Media
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    media.aac_51_output_enabled=true \
+    media.stagefright.enable-aac=true \
+    media.stagefright.enable-http=true \
+    media.stagefright.enable-player=true \
+    media.stagefright.enable-qcp=true \
+    media.stagefright.enable-scan=true \
+    mm.enable.smoothstreaming=true \
+    mmp.enable.3g2=true \
+    vendor.mm.enable.qcom_parser=63963135 \
+    media.stagefright.enable-fma2dp=true \
+    media.settings.xml=/vendor/etc/media_profiles_V1_0.xml \
+    persist.mm.enable.prefetch=true
 
-#Netflix custom property
-ro.netflix.bsp_rev=Q6150-17263-1
-#End of Netflix
+# NetFlix
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.netflix.bsp_rev=Q6150-17263-1
 
-#Thermal balancing windows of smb1390
-persist.vendor.cp.qc4.min_delta_decidegc=-80
-persist.vendor.cp.qc4.max_delta_decidegc=0
-persist.vendor.cp.qc3_min_delta_decidegc=-80
-persist.vendor.cp.qc3_max_delta_decidegc=0
-persist.vendor.cp.wireless_min_delta_decidegc=-80
-persist.vendor.cp.wireless_max_delta_decidegc=0
-persist.vendor.pps.ramp_step_size=20
+# SDCard
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.sys.sdcardfs=true
 
-#Status of softsim
-persist.sys.softsim.status=default,default
-persist.sys.softsim.netmode=4g
-persist.sys.softsim.type=default
-# end of device/samsung/a70q/system.prop
-
-#
+# Radio/RIL
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    use.voice.path.for.pcm.voip=true
