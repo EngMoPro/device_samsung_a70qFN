@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2015-2016 The CyanogenMod Project
-                   2017-2018 The LineageOS Project
-
+<!-- Copyright (C) 2018 The LineageOS Project
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -13,16 +10,16 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
-    <!-- Whether device has screen with higher aspect ratio -->
-    <bool name="config_haveHigherAspectRatioScreen">true</bool>
 
-    <!-- Whether device has a notch -->
-    <bool name="config_haveNotch">true</bool>
-	
-	<string-array name="config_restartActionsList">
-        <item>restart</item>
-        <item>restart_recovery</item>
-        <item>restart_download</item>
-    </string-array>
+<!-- Camera app resources that may need to be customized
+     for different hardware or product builds. -->
+<resources>
+    <!-- Enable support for camera api v2 -->
+    <bool name="support_camera_api_v2">true</bool>
+
+    <!-- Opens back camera using openLegacy() and forces api v1 -->
+    <bool name="back_camera_open_legacy">false</bool>
+
+    <!-- Opens front camera using openLegacy() and forces api v1 -->
+    <bool name="front_camera_open_legacy">false</bool>
 </resources>
