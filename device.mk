@@ -355,4 +355,4 @@ PRODUCT_COPY_FILES += \
 include $(LOCAL_PATH)/vendor_prop.mk
 
 # Inherit vendor
-$(call inherit-product, vendor/samsung/a70q/a70q-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/a70q/a70q-vendor.mk)
