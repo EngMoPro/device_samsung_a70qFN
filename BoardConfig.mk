@@ -23,6 +23,10 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a76
 
 
+# QCOM
+BOARD_USES_QCOM_HARDWARE := true
+
+
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Soong namespaces
