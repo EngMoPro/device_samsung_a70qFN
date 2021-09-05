@@ -219,7 +219,7 @@ PRODUCT_PACKAGES += \
     Snap
 
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-legacy
+    android.hardware.camera.provider@2.6-legacy
 
 
 
