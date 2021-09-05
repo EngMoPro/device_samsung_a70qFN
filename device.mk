@@ -4,9 +4,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 
-
-
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
@@ -14,6 +11,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
+
+
 
 
 
@@ -244,6 +243,7 @@ PRODUCT_COPY_FILES += \
 
 
 
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0:64 \
@@ -261,9 +261,6 @@ PRODUCT_PACKAGES += \
 
     
     
-
-
-
 
 
 
@@ -433,4 +430,4 @@ PRODUCT_COPY_FILES += \
 include $(LOCAL_PATH)/vendor_prop.mk
 
 # Inherit vendor
-$(call inherit-product, vendor/samsung/a70q/a70q-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/a70q/a70q-vendor.mk)
