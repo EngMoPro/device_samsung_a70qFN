@@ -15,7 +15,7 @@
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    name: "android.hardware.light@2.0-service.xiaomi_a70q",
+    name: "android.hardware.light@2.0-service.samsung_a70q",
     init_rc: ["android.hardware.light@2.0-service.xiaomi_a70q.rc"],
     srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
@@ -23,8 +23,6 @@ cc_binary {
         "libbase",
         "libhardware",
         "libhidlbase",
-        "libhidltransport",
-        "libhwbinder",
         "liblog",
         "libutils",
     ],

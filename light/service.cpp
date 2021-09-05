@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.light@2.0-service.xiaomi_a70q"
+#define LOG_TAG "android.hardware.light@2.0-service.samsung_a70q"
 
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>
