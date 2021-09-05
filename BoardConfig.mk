@@ -208,6 +208,8 @@ ifeq ($(HOST_OS),linux)
 endif
 
 
+# Root
+BOARD_ROOT_EXTRA_FOLDERS := efs omr
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
