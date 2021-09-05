@@ -65,6 +65,7 @@ BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_SOURCE := kernel/samsung/a70q
+TARGET_KERNEL_CONFIG := a70q_defconfig
 
 
 # Platform
