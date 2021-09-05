@@ -98,6 +98,11 @@ ifeq ($(HOST_OS),linux)
 endif
 
 
+
+# GPS
+TARGET_NO_RPC := true
+USE_DEVICE_SPECIFIC_GPS := true
+
 # Audio
 USE_XML_AUDIO_POLICY_CONF := 1
 
