@@ -195,6 +195,11 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.0-service \
     power.qcom:64    
 
+
+# Touchscreen
+PRODUCT_PACKAGES += \
+    libtinyxml2
+
 # camera
 PRODUCT_PACKAGES += \
     Snap
