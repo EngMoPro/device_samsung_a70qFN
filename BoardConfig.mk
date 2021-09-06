@@ -256,12 +256,6 @@ BOARD_VNDK_VERSION := current
 
 
 
- # Soong namespaces
-PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
-PRODUCT_SOONG_NAMESPACES += \
-    $(DEVICE_PATH) \
-    hardware/google/interfaces \
-    hardware/google/pixel
 
 
 # SELinux

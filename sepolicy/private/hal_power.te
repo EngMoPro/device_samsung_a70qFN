@@ -3,4 +3,3 @@ allow hal_power sysfs_sec:file rw_file_perms;
 allow hal_power vendor_latency_device:chr_file rw_file_perms;
 allow hal_power vendor_sysfs_kgsl:file rw_file_perms;
 allow hal_power vendor_sysfs_devfreq:file rw_file_perms;
-
