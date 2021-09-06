@@ -213,7 +213,18 @@ endif
 
 
 # Root
-BOARD_ROOT_EXTRA_FOLDERS := efs omr
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+BOARD_ROOT_EXTRA_FOLDERS := \
+    carrier \
+    dqmdbg \
+    efs \
+    keydata \
+    keyrefuge \
+    metadata \
+    optics \
+    prism \
+    spu \
+    omr
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
