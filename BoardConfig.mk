@@ -236,6 +236,23 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 
 
+
+
+# SELinux
+include device/qcom/sepolicy/SEPolicy.mk
+
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
+    device/samsung_slsi/sepolicy/common/private \
+    $(DEVICE_PATH)/sepolicy/private
+
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
+    device/samsung_slsi/sepolicy/common/public
+
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SELINUX_IGNORE_NEVERALLOWS := true
+
+
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
