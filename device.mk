@@ -30,8 +30,9 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.samsung_a70q
-
+    android.hardware.light@2.0-service \
+    android.hardware.light@2.0-impl \
+    lights.qcom
 
 
 
