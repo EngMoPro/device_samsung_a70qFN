@@ -270,6 +270,7 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 
 # Releasetools
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_a70q
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 
 
