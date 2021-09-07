@@ -432,7 +432,9 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
-
+# Touchscreen
+PRODUCT_PACKAGES += \
+    libtinyxml2
 
 # USB
 PRODUCT_PACKAGES += \
