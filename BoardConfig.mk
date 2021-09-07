@@ -231,7 +231,7 @@ endif
 TARGET_ENABLE_MEDIADRM_64 := true
 
 
-<<<<<<< HEAD
+
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
