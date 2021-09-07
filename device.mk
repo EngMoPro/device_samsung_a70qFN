@@ -53,6 +53,27 @@ PRODUCT_PACKAGES += \
 
 
 
+
+
+
+# OMX
+PRODUCT_PACKAGES += \
+    libc2dcolorconvert \
+    libgui_vendor \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxCore \
+    libOmxEvrcEnc \
+    libOmxG711Enc \
+    libOmxQcelp13Enc \
+    libOmxVdec \
+    libOmxVenc \
+    libOmxVidcCommon \
+    libstagefrighthw
+
+
+
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6-impl:64 \
