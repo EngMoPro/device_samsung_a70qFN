@@ -54,8 +54,8 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl:64 \
-    android.hardware.camera.provider@2.4-service_64 \
+    android.hardware.camera.provider@2.6-impl:64 \
+    android.hardware.camera.provider@2.6-service_64 \
     libdng_sdk.vendor \
     libgui_vendor \
     libxml2 \
@@ -249,12 +249,7 @@ PRODUCT_PACKAGES += \
 
 
 
-# camera
-PRODUCT_PACKAGES += \
-    Snap
 
-PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.6-legacy
 
 
 
