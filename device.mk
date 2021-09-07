@@ -362,10 +362,28 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-qti.xml \
 
-# Init
+# Ramdisk
 PRODUCT_PACKAGES += \
+    init.class_late.sh \
+    init.class_main.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sensors.sh \
+    init.qcom.sh \
+    init.qcom.usb.sh \
+    init.qti.qseecomd.sh \
+    fstab.qcom \
+    init.carrier.rc \
+    init.display.rc \
+    init.msm.usb.configfs.rc \
     init.qcom.rc \
-    fstab.qcom
+    init.qcom.usb.rc \
+    init.target.rc \
+    init.vendor.rilchip.rc \
+    init.vendor.rilcommon.rc \
+    ueventd.qcom.rc \
+    wifi_qcom.rc \
+    wifi_a70q.rc
     
 
 # Telephony
