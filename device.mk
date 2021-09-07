@@ -347,18 +347,16 @@ PRODUCT_BOOT_JARS += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.2 \
+    android.hardware.radio@1.3-radio-service.samsung \
+    vendor.samsung.hardware.radio@1.2.vendor \
     android.hardware.radio.config@1.0 \
     libjson \
     librmnetctl \
     libxml2 \
-<<<<<<< HEAD
-    libprotobuf-cpp-full
-=======
     libprotobuf-cpp-full \
     libtrafficcontrol-spoofer \
 	libcutils_shim
->>>>>>> d4210f79... a70q: shims: Provide strndup16to8 and strdup8to16 for RIL
+
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
