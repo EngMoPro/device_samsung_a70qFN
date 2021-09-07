@@ -177,6 +177,10 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_a70q
+TARGET_RECOVERY_DEVICE_MODULES := libinit_a70q
+
 
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
