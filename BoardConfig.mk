@@ -317,4 +317,4 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit the proprietary files
-include vendor/samsung/sm6150-common/BoardConfigVendor.mk
+include vendor/samsung/a70q/BoardConfigVendor.mk
